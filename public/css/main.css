@@ -1,8 +1,97 @@
-span {
-    font-family:'Avenir Next';
-    font-weight: bold;
-  }
-  .color1{ background-color: #dedede;}
-  .color2{background-color: #ebebec;}
-  .color3{background-color: #414043;}
-  .color4{background-color: #ff3b2e;}
+.avenitnext-font {
+  font-family: 'Avenir Next';
+  font-weight: bold;
+}
+
+.bgcolor1 {
+  background-color: #dedede;
+}
+
+.bgcolor2 {
+  background-color: #ebebec;
+}
+
+.bgcolor3 {
+  background-color: #414043;
+}
+
+.bgcolor4 {
+  background-color: #ff3b2e;
+}
+
+.h96 {
+  height: 96px;
+}
+
+nav .logo {
+  height: 28px;
+  width: auto;
+  margin: 30px auto 35px 140px;
+}
+
+.ace-link {
+  font-family: Avenir Next;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: 27px;
+  letter-spacing: 0px;
+  color: #ebebec !important;
+  margin-right: 7rem;
+}
+
+.banner-1 {
+
+  padding-top: 8rem;
+}
+
+.left-title {
+  font-family: Avenir Next;
+  font-size: 9rem;
+  font-weight: bold;
+  letter-spacing: 0rem;
+  line-height: 8rem;
+}
+
+ .red {
+  color: #ff3b2e;
+}
+
+.left-title .black {
+  color: #414043;
+}
+
+.left-title .white {
+  color: #ffffff;
+}
+
+.hide {
+  display: none;
+}
+
+.right-loop-img {
+
+  background: url("../images/banner-bg.png") no-repeat;
+}
+
+.right-loop-img ul,
+.right-loop-img ul li {
+  list-style: none;
+  width: 100%;
+}
+
+.red-line-18 {
+
+  height: 18rem;
+  border-right: solid 0.2rem #ff3b2e;
+}
+
+.red-icon-2 {
+
+  border-radius: 0.5rem;
+  border: solid 0.1rem #ff3b2e;
+}
+
+.product-item {
+  background-color: #dedede;
+}
