@@ -1,3 +1,7 @@
+body {
+  font-family: 'Avenir Next' !important;
+}
+
 .avenitnext-font {
   font-family: 'Avenir Next';
   font-weight: bold;
@@ -53,16 +57,16 @@ nav .logo {
   line-height: 8rem;
 }
 
- .red {
-  color: #ff3b2e;
+.red {
+  color: #ff3b2e !important;
 }
 
-.left-title .black {
-  color: #414043;
+.black {
+  color: #414043 !important;
 }
 
-.left-title .white {
-  color: #ffffff;
+.white {
+  color: #ffffff !important;
 }
 
 .hide {
@@ -95,3 +99,78 @@ nav .logo {
 .product-item {
   background-color: #dedede;
 }
+
+.pro-absolute {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.bg-gray {
+  background-color: #969598;
+}
+
+.font-size-4 {
+  font-size: 4rem;
+}
+
+.cate-dl {
+  text-align: right;
+}
+
+.cate-dt {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cate-dd {}
+
+/* about */
+.store-1-div {
+  margin: 1rem auto 1rem auto;
+  width: 95rem;
+  height: 50rem;
+  position: relative;
+  z-index: 0;
+}
+
+.store-1-img {
+  width: 59rem;
+  position: absolute;
+  background-color: chartreuse;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.store-1-content {
+  position: absolute;
+  right: 8rem;
+  bottom: 0;
+  width: 69rem;
+  background-color: #ff3b2e;
+}
+
+.store-1-star {
+  float: left;
+  width: 50%;
+  padding-top: 36rem;
+}
+
+.store-1-text {
+  float: left;
+  color: #ffffff;
+  width: 50%;
+}
+
+.store-1-title {
+  font-weight: bold;
+}
+
+.store-1-body {
+  line-height: normal;
+}
+
+/* about */

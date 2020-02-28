@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font_1655412_teg31c3gsei.css">
+    <title>index</title>
+    <style>
+        .checkedbox{
+            width: 11px;
+            height: 11px;
+            margin: 5px;
+        }
+        .checkedbox-gary {
+            border: 4px solid #414043;
+        }
+
+        .checkedbox-red {
+            border: 4px solid #FF3B2E;
+        }
+        .checkedbox-red .checkedbox{
+            background-color: #FF3B2E;
+        }
+        .checkedbox-red .checkedbox::after{
+            content: ' ';
+            background-color: #FF3B2E;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="card">
+            <img src="images/product.png" alt="">
+            <div class="card-img-overlay">
+                <div class="">
+                    <span class="h3 red "> offroad g25c-as27</span>
+                </div>
+                <div class="">
+                    <span class="black">born for gravel</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="card-title"> more information </div>
+            <div class="card-text">
+                dfasfdsafsadfwjeirufdjsfjdjksaj
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="h4">select all options to see price</div>
+                <dl>
+                    <dt><span class="checkedbox-gary ">
+                            <span class="checkedbox"></span>
+                        </span>
+                        options <input class="hide" type="checkbox" name="options">
+                    </dt>
+                    <dd>
+                        <span class="checkedbox-red">
+                            <span class="checkedbox"></span>
+                        </span>
+                        wheelset</dd>
+                    <dd>front wheel</dd>
+                    <dd>rear wheel</dd>
+                    <dd>slk33c-s19 rim</dd>
+                </dl>
+                <dl>
+                    <dt><span class="fchecked-box"></span>
+                        options <input class="hide" type="checkbox" name="options">
+                    </dt>
+                    <dd>wheelset</dd>
+                    <dd>front wheel</dd>
+                    <dd>rear wheel</dd>
+                    <dd>slk33c-s19 rim</dd>
+                </dl>
+            </div>
+            <div class="col-lg-6">
+                <!--may be change box size-->
+                <div class="card">
+                    <img src="images/product.png">
+
+                    <div class="card-img-overlay position-relative">
+                        <div class="position-absolute" style="bottom:3rem; left: 0;">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <img src="images/product.png" class="img-thumbnail">
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
