@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/font_1655412_teg31c3gsei.css">
     <title>index</title>
     <style>
-        .checkedbox{
+        .checkedbox {
             width: 11px;
             height: 11px;
             margin: 5px;
         }
+
         .checkedbox-gary {
             border: 4px solid #414043;
         }
@@ -22,85 +23,388 @@
         .checkedbox-red {
             border: 4px solid #FF3B2E;
         }
-        .checkedbox-red .checkedbox{
+
+        .checkedbox-red .checkedbox {
             background-color: #FF3B2E;
         }
-        .checkedbox-red .checkedbox::after{
+
+        .checkedbox-red .checkedbox::after {
             content: ' ';
             background-color: #FF3B2E;
+        }
+
+        .pro-img-title {
+            position: absolute;
+            right: 0;
+            top: 3rem;
+            font-size: 6rem;
+            font-weight: bold;
+        }
+
+        .pro-img-text {
+            position: absolute;
+            right: 4rem;
+            bottom: 0;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .pro-body {
+            width: 1640px !important;
+            margin: 0 auto 0 auto !important;
+        }
+
+        .border-red {
+            border: solid 5px #ff3b2e;
+        }
+
+        .ace-pl-2 {
+            padding-left: 2rem;
+        }
+
+        .ace-pb-2 {
+            padding-bottom: 1.5rem;
+        }
+
+        .ace-mb-2 {
+            margin-bottom: 2.5rem;
+        }
+
+        .border-2 {
+            border-style: solid;
+            border-width: 4px;
+        }
+
+        .border-black {
+            border-color: #414042;
+        }
+
+        .border-red {
+            border-color: #ff3b2e;
+        }
+
+        .bg-opacity-red {
+            background-color: rgba(255, 59, 46, 0.85);
+        }
+
+        .ace-h2 {
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+            margin-left: -1rem;
+            font-size: 2rem;
+        }
+
+        .ace-card-title {
+            font-size: 1.5rem;
+            letter-spacing: 6px;
+            font-weight: bold;
+        }
+
+        .bg-none {
+            background: none;
         }
     </style>
 </head>
 
-<body>
-    <div class="container-fluid">
+<body class="bgcolor1">
+    <div class="container-fluid pro-body ">
 
-        <div class="card">
-            <img src="images/product.png" alt="">
-            <div class="card-img-overlay">
-                <div class="">
-                    <span class="h3 red "> offroad g25c-as27</span>
+        <div class="card float-left border-0 bg-none" style="width: 60%;">
+            <img src="images/product/product的副本.png" width="748px" height="674px" alt="">
+            <div class="card-img-overlay ">
+                <div class="pro-img-title">
+                    <span class="red"> OFFROAD<br />
+                        G25C-AS27</span>
                 </div>
-                <div class="">
-                    <span class="black">born for gravel</span>
+                <div class="pro-img-text">
+                    <span class="black">BORN <br> FOR <br> GRAVEL</span>
                 </div>
             </div>
 
         </div>
-        <div class="card">
-            <div class="card-title"> more information </div>
-            <div class="card-text">
-                dfasfdsafsadfwjeirufdjsfjdjksaj
+        <div class="card float-right border-0 text-right red bg-none" style="width: 39%;padding-top:23rem;">
+            <div class="card-title font-weight-bold "> MORE INFORMATION </div>
+            <div class="card-text" style="width: 19rem;margin: 0 0 0 auto;">
+                G25C-AS27-650B DISC brake wheelset is
+                born for gravel bikes in mountains with a 27mm internal width. You
+                could simply mount MTB tires and ride into the mountains to explore the nature and fun.
+
+                Since this wheel is with a hookless bead design for a better impact strength, we recommend to mount
+                tubeless tires and within maximum 60PSI tire pressure.
             </div>
         </div>
+        <div class="clearfix mb-5"></div>
+        <!--option-->
         <div class="row">
-            <div class="col-lg-6">
-                <div class="h4">select all options to see price</div>
-                <dl>
-                    <dt><span class="checkedbox-gary ">
-                            <span class="checkedbox"></span>
-                        </span>
-                        options <input class="hide" type="checkbox" name="options">
+            <div class="col-lg-6 border-red pt-3 pb-3">
+                <div class="h3 red font-weight-bold">SELECT ALL OPTIONS TO SEE PRICE</div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        OPTIONS
                     </dt>
-                    <dd>
-                        <span class="checkedbox-red">
-                            <span class="checkedbox"></span>
-                        </span>
-                        wheelset</dd>
-                    <dd>front wheel</dd>
-                    <dd>rear wheel</dd>
-                    <dd>slk33c-s19 rim</dd>
-                </dl>
-                <dl>
-                    <dt><span class="fchecked-box"></span>
-                        options <input class="hide" type="checkbox" name="options">
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> wheelset
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> front wheel
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> ear wheel
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> slk33c-s19 rim
+                    </div>
+                </div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        FINISH
                     </dt>
-                    <dd>wheelset</dd>
-                    <dd>front wheel</dd>
-                    <dd>rear wheel</dd>
-                    <dd>slk33c-s19 rim</dd>
-                </dl>
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> ud matte
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> a1801 glossy
+                    </div>
+                </div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        DECAL COLOR
+                    </dt>
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> black/white
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> red/white
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> w/o
+                    </div>
+                </div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        FRONT HUB
+                    </dt>
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> 24H*12/100AT
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> 24H*15/100AT
+                    </div>
+                </div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        BACK HUB
+                    </dt>
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> 24H*12/142AT
+                        Shimano11
+                    </div>
+                    <div class="col-lg-4 ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> 24H*12/142AT
+                        Sram XDR
+                    </div>
+                </div>
+                <div class="row ace-mb-2">
+                    <dt class=" col-lg-12 font-weight-bold  ace-pb-2">
+                        ROTOR INTERFACE
+                    </dt>
+                    <div class="col-lg-4  ace-pl-2 ace-pb-2">
+                        <input class="form-check-input" type="checkbox" name="options"> Center lock
+                    </div>
+                </div>
+                <div class="row font-weight-bold pt-3">
+                    <div class="col-lg-4 red " style="font-size: 1.2rem;">
+                        $8888.88
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="black" href="#"><span class="font_family icon-heart-regular"> LIKE </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="black" href="#">
+                            <span class="font_family icon-shopping-cart-regular"></span>
+                            IN CART
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5 offset-1">
                 <!--may be change box size-->
                 <div class="card">
-                    <img src="images/product.png">
-
-                    <div class="card-img-overlay position-relative">
-                        <div class="position-absolute" style="bottom:3rem; left: 0;">
+                    <img src="images/product/RAY23320.png" width="674px" height="1011px    ">
+                    <div class="card-img-overlay">
+                        <div class="position-absolute" style="bottom: 0.5rem;left: 1.5rem;">
                             <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <img src="images/product.png" class="img-thumbnail">
+                                <li class="list-inline-item border-2 border-black">
+                                    <img src="images/product.png" style="height: 25px;width: 25px;"
+                                        class="img-thumbnail">
                                 </li>
-
+                                <li class="list-inline-item border-2 border-black">
+                                    <img src="images/product.png" style="height: 25px;width: 25px;"
+                                        class="img-thumbnail">
+                                </li>
+                                <li class="list-inline-item border-2 border-black">
+                                    <img src="images/product.png" style="height: 25px;width: 25px;"
+                                        class="img-thumbnail">
+                                </li>
+                                <li class="list-inline-item border-2 border-red">
+                                    <img src="images/product.png" style="height: 25px;width: 25px;"
+                                        class="img-thumbnail">
+                                </li>
                             </ul>
+                        </div>
+                        <div class=" position-absolute" style="bottom: 1.5rem;right: 1.5rem;">
+                            <img src="images/product/expand-solid.svg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--guige-->
+        <h2 class="ace-h2 font-weight-bold red">RIM SPECIFICATIONS </h2>
+        <div class="row">
+            <div class="card">
+                <img src="images/product/G44C-AS25-4-1.png" height="674px" alt="">
+                <div class="card-img-overlay p-0">
+                    <div class=" row white bg-opacity-red m-0 h-100"
+                        style="width: 74.4%; padding-top: 13%;padding-left: 2rem;">
+                        <div class="col-lg-4 ">
+                            <div class="card-title font-weight-bold mb-3">RIM SPECS</div>
+                            <div class="card-text"> Profile </div>
+                            <div class="card-text">Rim Size </div>
+                            <div class="card-text">Rim Type </div>
+                            <div class="card-text">Brake </div>
+                            <div class="card-text">Max Spoke Tension </div>
+                            <div class="card-text">Rim Weight </div>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <div class="card-title font-weight-bold">RIM SPECS</div>
+                            <div class="card-text">jhbvhg</div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card-title font-weight-bold">RIM SPECS</div>
+                            <div class="card-text">hbvcvjjh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--shuxing--->
+        <h2 class="ace-h2 font-weight-bold red">SPECIFICATIONS</h2>
+        <div class=" row">
+            <div class="card">
+                <img src="images/product/G44C-AS25-5-1.png" height="674px" alt="">
+                <div class="card-img-overlay p-0">
+                    <div class="white bg-opacity-red ml-0 " style="width: 65%;padding-top: 1rem;padding-left: 2rem;margin-top: 8rem;height: 65%;">
+                        <div class="card-title">ULTRA SMOOTH INNER WALL</div>
+                        <div class="card-text">We use a specially shaped bladder in moulding the rims. Comparing
+                            with
+                            traditional bladder, it’s designed in a correct size and shape to support the rim’s
+                            inside
+                            correctly & smoothly.
 
+                            The result is that we could see a very clean and smooth inner wall, which means the
+                            carbon
+                            fabrics are strentched smoothly and optimized, which ensure the best strength of the
+                            carbon
+                            fabrics.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!---specifcations-->
+        <h2 class="ace-h2 font-weight-bold red">COSTUMER REVIEWS</h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="crad">
+                    <img src="images/G-1.png" width="398px" height="199px" alt="">
+                    <div class="card-title bgcolor3 white mb-0 p-2 ace-card-title">Lorem ipsum dolor sit amet</div>
+                    <div class="card-text bgcolor3 white p-2">
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                        ipsum dolor
+                        sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet. Lorem
+                        ipsum dolor sit amet, consetetur</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="crad">
+                    <img src="images/G-1.png" width="398px" height="199px" alt="">
+                    <div class="card-title bgcolor3 white mb-0 p-2 ace-card-title">Lorem ipsum dolor sit amet</div>
+                    <div class="card-text bgcolor3 white p-2">
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                        ipsum dolor
+                        sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet. Lorem
+                        ipsum dolor sit amet, consetetur</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="crad">
+                    <img src="images/G-1.png" width="398px" height="199px" alt="">
+                    <div class="card-title bgcolor3 white mb-0 p-2 ace-card-title">Lorem ipsum dolor sit amet</div>
+                    <div class="card-text bgcolor3 white p-2">
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                        ipsum dolor
+                        sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet. Lorem
+                        ipsum dolor sit amet, consetetur</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="crad">
+                    <img src="images/G-1.png" width="398px" height="199px" alt="">
+                    <div class="card-title bgcolor3 white mb-0 p-2 ace-card-title">Lorem ipsum dolor sit amet</div>
+                    <div class="card-text bgcolor3 white p-2">
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                        ipsum dolor
+                        sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet. Lorem
+                        ipsum dolor sit amet, consetetur</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-right">
+                <a href="#" class="red font-weight-bold"> view all reviews</a>
+            </div>
+        </div>
     </div>
 
 </body>
