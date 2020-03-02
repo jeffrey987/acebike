@@ -3,3 +3,6 @@ node_modules/
 .vscode
 .DS_Store
 html.code-workspace
+public/.DS_Store
+public/images/.DS_Store
+
