@@ -1,0 +1,7 @@
+﻿{
+  "SystemName": "CoreTheme",
+  "FriendlyName": "Core Theme",
+  "SupportRTL": false,
+  "PreviewImageUrl": "~/Themes/CoreTheme/Core-Theme.png",
+  "PreviewText": "This the professional theme for nopCommerce built on the BootStrap UI framework using latest HTML5 and CSS3 techniques"
+}
