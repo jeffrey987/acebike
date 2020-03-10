@@ -4,7 +4,7 @@
 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
 @await Html.PartialAsync("_Notifications")
 
-<div class="master-wrapper-page">
+    <div class="container-fluid bgcolor2 pl-0 pr-0">
         @await Html.PartialAsync("_JavaScriptDisabledWarning")
         @await Html.PartialAsync("_OldInternetExplorerWarning")
         <div class="admin-header-link">
@@ -18,24 +18,9 @@
         </script>        
         <div class="master-wrapper-content">
             @* @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_top" }) *@
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentBefore })
-                    </div>
-                </div>
-                @*ajax loading window*@
-                <div class="ajax-loading-block-window" style="display: none">
-                    <div class="loading-image">
-                    </div>
-                </div>
-            </div>
+          
             <div class="master-column-wrapper">
-                <div class="container">
-                    <div class="row">
                         @RenderBody()
-                    </div>
-                </div>
             </div>
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentAfter })
         </div>

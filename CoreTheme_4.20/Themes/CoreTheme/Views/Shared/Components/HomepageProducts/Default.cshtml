@@ -1,34 +1,21 @@
 ﻿@model IList<ProductOverviewModel>
-
 @if (Model.Count > 0)
 {
-<div class="product-grid home-page-product-grid row">
-    <div class="title sub-title">
-        <strong>@T("Homepage.Products")</strong>
-    </div>
-        @if (Model.Count <= 4)
-        {
-            foreach (var item in Model)
-            {
-                <div class="item-box product-grid col-xs-12 col-sm-4 col-md-3 clearfix">
-                    <div class="thumbnail">
-                        @await Html.PartialAsync("_ProductBox", item)
-                    </div>
-                </div>
-            }
-        }
-        else
-        {
-            <div id="home-features-slider" class="home-features-slider owl-carousel owl-theme">
-                @foreach (var item in Model)
-                {
-                    <div class="item-box product-grid col-xs-12 col-sm-12 col-md-12 clearfix">
-                        <div class="thumbnail">
-                            @await Html.PartialAsync("_ProductBox", item)
-                        </div>
-                    </div>
-                }
+    <div class="container pl-4_5 pr-4_5 mt-5">
+        <div class="row">
+            <div class="col-lg-12 red ">
+                <h1><strong>FRESH AND FAST2</strong></h1>
             </div>
-        }
-</div>
+
+            @foreach (var item in Model)
+            {
+            <div class="col-lg-3 ">
+                 @await Html.PartialAsync("_ProductBox", item)
+            </div>
+            }
+            <div class="col-lg-12 text-right ">
+                <a href="#" class="red avenitnext-font">view all our products</a>
+            </div>
+        </div>
+    </div>
 }
