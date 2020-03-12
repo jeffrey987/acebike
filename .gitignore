@@ -6,10 +6,10 @@ html.code-workspace
 public/.DS_Store
 public/images/.DS_Store
 
-CoreTheme_4.20/Themes/CoreTheme/Views/Catalog/*
 CoreTheme_4.20/Themes/CoreTheme/Views/Checkout/*
 CoreTheme_4.20/Themes/CoreTheme/Views/Customer/*
 CoreTheme_4.20/Themes/CoreTheme/Views/News/*
 CoreTheme_4.20/Themes/CoreTheme/Views/Newsletter/*
 CoreTheme_4.20/Themes/CoreTheme/Views/Order/*
 CoreTheme_4.20/Themes/CoreTheme/Views/Product/*
+public/images/.DS_Store

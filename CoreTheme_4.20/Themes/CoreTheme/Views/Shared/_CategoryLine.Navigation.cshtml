@@ -29,20 +29,22 @@
         liClass += " last";
     }
 }
-<li class="@liClass">
-    <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })">@Model.Category.Name
+ <dl class="cate-dl">
+     <dt class="cate-dt">Category</dt>
+            <dd class="cate-dd"> 
+    <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })" class="red">@Model.Category.Name
         @if (Model.Category.NumberOfProducts.HasValue)
         {
             <text> </text>@T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
         }
-    </a>
+    </a></dd>
     @{
         if (Model.Category.Id == Model.CurrentCategoryId ||
             Model.Category.SubCategories.Count(BreadCrumbContainsCurrentCategoryId) > 0)
         {
             if (Model.Category.SubCategories.Count > 0)
-            {
-                <ul class="sublist">
+            {      
+                
                     @foreach (var subCategory in Model.Category.SubCategories)
                     {
                         var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
@@ -52,8 +54,9 @@
                         };
                         @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
                     }
-                </ul>
+              
             }
         }
     }
-</li>
+
+</dl>

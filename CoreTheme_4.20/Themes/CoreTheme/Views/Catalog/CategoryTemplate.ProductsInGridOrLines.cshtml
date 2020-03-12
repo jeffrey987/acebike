@@ -1,20 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿@model CategoryModel
+@using Nop.Core.Domain.Common
+@using Nop.Core.Domain.Seo
+@inject Nop.Core.IWebHelper webHelper
+@inject SeoSettings seoSettings
+@inject CommonSettings commonSettings
+@{
+    Layout = "_ColumnsOne";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font_1655412_teg31c3gsei.css">
-    <title>index</title>
-</head>
+    //title
+    Html.AddTitleParts(!string.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    //meta
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+    //page class
+    Html.AppendPageCssClassParts("html-category-page");
 
-<body>
+    if (seoSettings.CanonicalUrlsEnabled)
+    {
+        var categoryUrl = Url.RouteUrl("Category", new { SeName = Model.SeName }, webHelper.CurrentRequestProtocol).ToLowerInvariant();
+        Html.AddCanonicalUrlParts(categoryUrl, seoSettings.QueryStringInCanonicalUrlsEnabled);
+    }
+
+    var breadcrumbDelimiter = commonSettings.BreadcrumbDelimiter;
+}
 
 
-    <h1 class="h1 font-weight-bold black" style="font-size: 8rem;margin-left: 9rem;">PRIDUCT OVERVIEW </h1>
+    <h1 class="h1 font-weight-bold black" style="margin-left: 9rem;">PRIDUCT OVERVIEW </h1>
 <!--begin right-->
     <nav class="navbar-collapse position-fixed" style="right: 9rem; top: 11rem;">
         <dl class="cate-dl">
@@ -41,9 +52,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card text-center">
-                    <img src="images/product.png" class="card-img" alt="">
+                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
                     <div class="card-header">
-                        <span class="font_family icon-heart-regular float-left ml-3"></span>
+                        <span class="font_family icon-heart-regular float-left ml-3"></span>    
                         888888888
                         <span class="font_family icon-shopping-cart-regular float-right mr-3"></span>
                     </div>
@@ -52,8 +63,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card text-center bgcolor4">
-                    <img src="images/product.png" class="card-img" alt="">
-                    <div class="card-img-overlay white font-weight-bold" style="font-size: 4rem; line-height: 15rem;" >sold out</div>
+                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
+                    <div class="card-img-overlay bgcolor4 font-weight-bold" style="line-height: 15rem;" >sold out</div>
                    
                 </div> 
                 <div class="card-header">
@@ -65,7 +76,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card text-center">
-                    <img src="images/product.png" class="card-img" alt="">
+                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
                     <div class="card-header">
                         <span class="font_family icon-heart-regular float-left ml-3"></span>
                         888888888
@@ -77,7 +88,3 @@
         </div>
     </div>
     <!-- end left-->
-
-</body>
-
-</html>

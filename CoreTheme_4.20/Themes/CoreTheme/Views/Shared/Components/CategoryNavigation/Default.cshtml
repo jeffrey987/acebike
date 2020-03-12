@@ -55,13 +55,12 @@
 }*@
 @if (Model.Categories.Count > 0)
 {
-    <div class="block block-category-navigation well box-shadow-wrapper">
-        <div class="title main-title">
-            <strong>@T("Categories")</strong>
-        </div>
-        <div class="listbox">
-            <ul class="nav nav-list">
-                @foreach (var category in Model.Categories)
+   
+
+    <!--begin right-->
+    <nav class="navbar-collapse position-fixed" style="right: 9rem; top: 11rem;">
+        
+         @foreach (var category in Model.Categories)
                 {
                     var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
                     {
@@ -70,7 +69,7 @@
                     };
                     @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
                 }
-            </ul>
-        </div>
-    </div>
+
+    </nav>
+	<!--end right-->
 }
