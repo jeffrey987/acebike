@@ -1,0 +1,100 @@
+{
+  "id": "1655412",
+  "name": "acebike",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13216123",
+      "name": "expand-solid2",
+      "font_class": "expand-solid1",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "13152798",
+      "name": "angle-left-solid-1",
+      "font_class": "angle-left-solid-",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "13152785",
+      "name": "facebook-square-brands",
+      "font_class": "facebook-square-brands",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "13152786",
+      "name": "expand-solid",
+      "font_class": "expand-solid",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "13152787",
+      "name": "search-solid",
+      "font_class": "search-solid",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "13152789",
+      "name": "star-solid",
+      "font_class": "star-solid",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "13152790",
+      "name": "instagram-brands",
+      "font_class": "instagram-brands",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "13152791",
+      "name": "times-solid",
+      "font_class": "times-solid",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "13152793",
+      "name": "star-regular",
+      "font_class": "star-regular",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "13152794",
+      "name": "linkedin-brands",
+      "font_class": "linkedin-brands",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "13152795",
+      "name": "heart-regular",
+      "font_class": "heart-regular",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "13152796",
+      "name": "shopping-cart-regular",
+      "font_class": "shopping-cart-regular",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "13152797",
+      "name": "download-solid",
+      "font_class": "download-solid",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

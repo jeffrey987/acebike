@@ -1,0 +1,16 @@
+/* html{font-size: 100px;}
+@media screen and (max-width:1728px){
+    html{
+        font-size: 90px !important;
+    }
+}
+@media screen and (max-width:1536px){
+    html{
+        font-size: 80px !important;
+    }
+}
+@media screen and (max-width:1344px){
+    html{
+        font-size: 70px !important;
+    }
+} */

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-color">
+<script>
+    function IsPC() { for (var n = navigator.userAgent, i = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"], o = !0, e = 0; e < i.length; e++)if (0 < n.indexOf(i[e])) { o = !1; break } return o } IsPC() || (window.location.href = "/wap/")
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://gtms04.alicdn.com/tps/i4/TB1_oz6GVXXXXaFXpXXJDFnIXXX-64-64.ico"
+    type="image/x-icon" />
+<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://g.alicdn.com/thx/cube/1.3.2/cube.min.css">
+<link rel="stylesheet" href="./fonts//iconfont.css">
+<link rel="stylesheet" href="./css/animate.css">
+<link rel="stylesheet" href="./css/swiper.min.css">
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/index.css">
+
+
+<script>
+    var deviceWidth
+    setHtmlFontSize()
+    if (window.addEventListener) {
+        window.addEventListener('resize', function () {
+            setHtmlFontSize()
+        }, false)
+    }
+    function setHtmlFontSize() {
+        deviceWidth = document.documentElement.clientWidth > 1920 ? 1920 : document.documentElement.clientWidth
+        document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + deviceWidth / 19.20 + 'px !important'
+        console.log('rem', 'font-size:' + deviceWidth / 19.20)
+    }
+</script>
+<script src="./js/jquery.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/jquery.rating-stars.js"></script>
+
+<script src="./js/common.js"></script>
+<script src="./fonts/iconfont.js"></script>
+</head>
+<style>
+    .rating-stars {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rating-stars .rating-stars-container {
+        font-size: 0px;
+    }
+
+    .rating-stars .rating-stars-container .rating-star {
+        display: inline-block;
+        font-size: .32rem;
+        color: #fff;
+        cursor: pointer;
+        padding: .05rem .1rem;
+    }
+
+    .rating-stars .rating-stars-container .rating-star.is--active .fa:before,
+    .rating-stars .rating-stars-container .rating-star.is--hover .fa:before {
+        content: "\f005";
+    }
+
+
+    .rating-stars .rating-stars-container .rating-star.is--no-hover {
+        color: #fff;
+    }
+</style>
+
+<body class="bg-color">
+    <!-- 头部 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top justify-content-end">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand nav-logo pd0 ml5" src="./images/logo.png" alt="">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav pull-right">
+                    <li class=""><a href="#">OUR STORY</a></li>
+                    <li><a href="#">CUSTOMER STORIES</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#" id="searchIcon" class="glyphicon glyphicon-search"></a></li>
+                    <li class="over-hidden"><input class="nav-search" type="text"></li>
+                    <li><a href="#" class="nav-country"><img src="./flags/tj.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="cus-box">
+        <div class="cus-title">STORIES FROM OUR CUSTOMERS</div>
+
+        <div class="cus-list">
+            <!-- 一 -->
+            <div class="cus-item">
+                <div class="img-box">
+                    <img src="./images/carter-moorse-k-1.png" alt="">
+                </div>
+                <div class="tx-box">
+                    <div class="rating-stars block">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> ABOUT US</div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        </div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        </div>
+                        <div class="cus-text">
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet,
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- 二 -->
+            <div class="cus-item">
+                <!-- 文字在左 添加 class :left -->
+                <div class="tx-box left">
+                    <div class="rating-stars block ">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> ABOUT US</div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        </div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        </div>
+                        <div class="cus-text">
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet,
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./images/daniel-frank-wPKb-1.png" alt="">
+                </div>
+            </div>
+            <!-- 三 -->
+            <div class="cus-item">
+                <div class="img-box">
+                    <img src="./images/thomas-schweighofer-26A0w1D-tfM-unsplash.png" alt="">
+                </div>
+                <div class="tx-box">
+                    <div class="rating-stars block">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> ABOUT US</div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        </div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        </div>
+                        <div class="cus-text">
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet,
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- 四 -->
+            <div class="cus-item">
+                <!-- 文字在左 添加 class :left -->
+                <div class="tx-box left">
+                    <div class="rating-stars block ">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> ABOUT US</div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        </div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        </div>
+                        <div class="cus-text">
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet,
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./images/david-hellmann-1.png" alt="">
+                </div>
+            </div>
+
+            <!-- 五-->
+            <div class="cus-item">
+                <div class="img-box">
+                    <img src="./images/carter-moorse-k-1.png" alt="">
+                </div>
+                <div class="tx-box">
+                    <div class="rating-stars block">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> ABOUT US</div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        </div>
+                        <div class="cus-text">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        </div>
+                        <div class="cus-text">
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                            amet,
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- over -->
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class=" clearfix"><img id="gotop" class="back-top pull-right" src="./images/backtop.png" alt=""></div>
+
+        <div class="footer-box">
+            <div class="t-box">
+                <div class="t-item"><span class="icon font_family">&#xe603;</span><span class="t-text">Ace
+                        bikes</span></div>
+                <div class="t-item"><span class="icon font_family">&#xe608;</span><span class="t-text">@acebikes</span>
+                </div>
+                <div class="t-item"><span class="icon font_family">&#xe60b;</span><span class="t-text">Acebikes</span>
+                </div>
+            </div>
+
+
+            <div class="footer-list">
+                <!--    第一列-->
+                <div class="footer-item">
+                    <div class="f-text">ACEBIKE</div>
+                    <div> OUR STORY</div>
+                    <div>MATERIAL</div>
+                    <div>TECHNOLOGY</div>
+                    <div>JOIN US</div>
+                    <div> CONTACT</div>
+                </div>
+
+
+                <!--    第二列-->
+                <div class="footer-item">
+                    <div class="f-text"> PRODUCTS</div>
+                    <div> ROAD</div>
+                    <div>OFF ROAD</div>
+                    <div> MTB</div>
+                    <div> COMPONENTS</div>
+                    <div> SHIMANO</div>
+                    <div> APPERAL</div>
+                </div>
+
+                <!--  第三列-->
+                <div class="footer-item">
+                    <div class="f-text">SUPPORT</div>
+                    <div>FQAs</div>
+                    <div>RIM ARCHIVE</div>
+                    <div>SPOKE CHART</div>
+                    <div> MAINTENANCE</div>
+                    <div>WARRANTY</div>
+                    <div>CRASH REPLACEMENT</div>
+                    <div>PAYMENT & DELIVERY</div>
+                </div>
+
+                <!--  第四列-->
+                <div class="footer-item">
+                    <div class="f-text">POLICY</div>
+                    <div> RETURNS & REFUND</div>
+                    <div>SHIPMENT</div>
+                    <div>TAXES</div>
+                    <div>PRIVACY</div>
+                    <div>COOKIES</div>
+
+                </div>
+                <!--  第五列-->
+                <div class="footer-item">
+                    <div class="f-text">NEWS LETTER </div>
+                    <div> sign in for al te latest</div>
+                    <div> and greatest from acebikes</div>
+                    <div class="f-border">E-mailadress</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    var ratingOptions = {
+        selectors: {
+            starsSelector: '.rating-stars',
+            starSelector: '.rating-star',
+            starActiveClass: 'is--active',
+            starHoverClass: 'is--hover',
+            starNoHoverClass: 'is--no-hover',
+            targetFormElementSelector: '.rating-value'
+        }
+    };
+
+    $(".rating-stars").ratingStars(ratingOptions);
+
+</script>
+
+</html>
