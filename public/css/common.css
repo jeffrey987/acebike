@@ -49,6 +49,10 @@ html{
 .w100{
     width: 100% !important;
 }
+.color-fff{
+    color: #fff!important;
+
+}
 .pointer{
     cursor: pointer;
 }

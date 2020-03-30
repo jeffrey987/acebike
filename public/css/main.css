@@ -217,6 +217,16 @@
 
     color:rgba(255,59,46,0.50);
 }
+.item-mask-text {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: .35rem;
+    color: #fff;
+    font-weight: bold;
+}
 
 
 

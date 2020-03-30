@@ -66,9 +66,9 @@
   <div class="mian-box">
     <div class="home-top">
       <div class="tip-box">
-        <div><span class="text-red">A</span>CE</div>
-        <div>YOUR</div>
-        <div>RIDE</div>
+        <div><span class="text-red">A</span><span class="text-black">CE</span></div>
+        <div class="text-black">YOUR</div>
+        <div class="text-black">RIDE</div>
         <div>ACE</div>
         <div>BIKE</div>
         <div class="scroll-box"><img   src="./images/scroll-bar.png"/></div>
@@ -94,6 +94,7 @@
     <div class="cir-list">
       <div class="cir-item">
         <div class="item-mask">
+          <div class="item-mask-text">MOUNTAINBIKES INFO</div>
           <span class="icon font_family left-icon" >&#xe60c;</span>
           <span class="bot-text">$666</span>
           <span class="icon font_family right-icon" >&#xe60d;</span>
@@ -102,6 +103,7 @@
       </div>
       <div class="cir-item">
         <div class="item-mask">
+          <div class="item-mask-text">MOUNTAINBIKES INFO</div>
           <span class="icon font_family left-icon" >&#xe60c;</span>
           <span class="bot-text">$666</span>
           <span class="icon font_family right-icon" >&#xe60d;</span>
@@ -110,6 +112,7 @@
       </div>
       <div class="cir-item">
         <div class="item-mask">
+          <div class="item-mask-text">MOUNTAINBIKES INFO</div>
           <span class="icon font_family left-icon" >&#xe60c;</span>
           <span class="bot-text">$666</span>
           <span class="icon font_family right-icon" >&#xe60d;</span>
@@ -118,6 +121,7 @@
       </div>
       <div class="cir-item">
         <div class="item-mask">
+          <div class="item-mask-text">MOUNTAINBIKES INFO</div>
           <span class="icon font_family left-icon" >&#xe60c;</span>
           <span class="bot-text">$666</span>
           <span class="icon font_family right-icon" >&#xe60d;</span>
@@ -292,8 +296,6 @@
     var swiper = new Swiper('.swiper-container', {
             direction : 'horizontal', 
             slidesPerView: 1,
-            autoHeight: true,
-            spaceBetween: 30,
             nested:false,
             freeMode : false,
             freeModeMomentumRatio : 0.5,
@@ -307,7 +309,6 @@
             on: {
                 slideChangeTransitionEnd: function(){
                     imgIndex = this.activeIndex
-                
                 },
               },
           
