@@ -48,6 +48,7 @@
 </head>
 
 <body class="bg-color">
+	
     <!-- 头部 -->
     <nav class="navbar navbar-inverse navbar-fixed-top justify-content-end">
         <div class="container-fluid">
@@ -71,7 +72,17 @@
                     <li><a href="#">PRODUCTS</a></li>
                     <li><a href="#" id="searchIcon" class="glyphicon glyphicon-search"></a></li>
                     <li class="over-hidden"><input class="nav-search" type="text"></li>
-                    <li><a href="#" class="nav-country"><img src="./flags/tj.png" alt=""></a></li>
+<!--                    <li><a href="#" class="nav-country"><img src="./flags/tj.png" alt=""></a></li>-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img class="nav-country" style="width: .22rem;" src="./flags/tj.png" alt=""> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu flag-list" >
+                           <li><img src="./flags/ad.png" alt=""></li>
+                            <li><img src="./flags/ae.png" alt=""></li>
+                            <li><img src="./flags/af.png" alt=""></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -80,8 +91,7 @@
         <div class="op-pro">
             <img src="./images/product.png" alt="">
             <div class="op-title">
-                <div>OFFROAD</div>
-                <div>G25C-AS27</div>
+                OFFROAD G25C-AS27
             </div>
             <div class="op-title-bot">
                 <div>BORN</div>
@@ -161,6 +171,7 @@
                     </div>
 
                     <div class="op-cart-box">
+					<button id="dialog-notifications-success" ></button>
                         <span class=" pull-left pirce"><span class="bot-text">$666</span></span>
                         <span><span class="icon font_family ">&#xe60c;</span>LIKE</span>
                         <span class="pull-right"><span class="icon font_family ">&#xe60d;</span>IN CART</span>
@@ -171,22 +182,22 @@
             <!-- 图片 -->
             <div class="ch-img-box">
                 <div class="ch-img">
-                    <img src="./images/product/RAY23320.png" alt="" class="m-img">
-                    <div class="ch-bt-list">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23306.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23306.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
-                        <img src="./images/product/RAY23320 2.png" alt="" class="ch-bt-item">
-                        <span class="ch-bt-item span icon font_family img_toggle" id="img_toggle_id1">&#xe604;</span>
-                        <span class="ch-bt-item span icon font_family img_toggle" id="img_toggle_id2"
+                    <img src="./images/product/RAY23320.png" alt="" id="main_img" class="m-img">
+                    <div class="ch-bt-list" id="ch_list">
+                        <img  data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item active" >
+                        <img  data-img="./images/RAY-56.png" src="./images/product/RAY23306.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/product.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-95.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23306.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23289.png" alt="" class="ch-bt-item">
+                        <img data-img="./images/RAY-43.png" src="./images/product/RAY23320 2.png" alt="" class="ch-bt-item">
+                        <span data-img="./images/RAY-43.png" class="ch-bt-item span icon font_family img_toggle" id="img_toggle_id1">&#xe604;</span>
+                        <span data-img="./images/RAY-43.png" class="ch-bt-item span icon font_family img_toggle" id="img_toggle_id2"
                             style="display: none;">&#xe60f;</span>
                     </div>
                 </div>
@@ -460,9 +471,28 @@
             </div>
         </div>
     </div>
+    <div class="modal fade goods" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p>该商品已添加到购物车<span style="cursor: pointer;text-decoration:underline;">点击查看</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 </body>
 <script>
+	
+    $('.goods').modal('show')
     var toggle = 1
     $('.img_toggle').click(function () {
         console.log('toggle', toggle)
@@ -508,6 +538,12 @@
         $(this).find('.latest-img').attr('src',"./images/G-3.png")
     },function(){
         $(this).find('.latest-img').attr('src',"./images/G-2.png")
+    })
+
+    $('#ch_list img').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+        var img = $(this).data('img')
+        $('#main_img').attr('src',img)
     })
 </script>
 
