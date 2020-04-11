@@ -55,11 +55,10 @@
 }*@
 @if (Model.Categories.Count > 0)
 {
-   
-
     <!--begin right-->
-    <nav class="navbar-collapse position-fixed" style="right: 9rem; top: 11rem;">
-        
+                 
+         <div class="ov-r-item">
+            <div class="orr-title">CATEGORIES</div>
          @foreach (var category in Model.Categories)
                 {
                     var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
@@ -69,7 +68,7 @@
                     };
                     @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
                 }
-
-    </nav>
+            </div>
+    
 	<!--end right-->
 }

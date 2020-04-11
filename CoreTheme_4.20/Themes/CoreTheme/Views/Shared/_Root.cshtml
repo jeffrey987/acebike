@@ -4,18 +4,17 @@
 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
 @await Html.PartialAsync("_Notifications")
 
-    <div class="container-fluid bgcolor2 pl-0 pr-0">
+   
         @await Html.PartialAsync("_JavaScriptDisabledWarning")
         @await Html.PartialAsync("_OldInternetExplorerWarning")
-        <div class="admin-header-link">
-            <ul>
-                @await Component.InvokeAsync("AdminHeaderLinks")
-            </ul>
-        </div>    
+
+        <!--body begin-->
+        @await Component.InvokeAsync("AdminHeaderLinks") 
+
         @await Html.PartialAsync("_Header")
-        <script asp-location="Footer">
+        <!-- <script asp-location="Footer">
             AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
-        </script>        
+        </script>         -->
         <div class="master-wrapper-content">
             @* @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_top" }) *@
           
@@ -26,8 +25,12 @@
         </div>
         @await Component.InvokeAsync("Footer")
         @* Use this content for back to top page scrolling *@
-        <div id="backTop"></div>
-</div>
+     
+
 @await Component.InvokeAsync("EuCookieLaw")
 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })
+
+ <script asp-location="Footer">
+        AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+    </script>
 

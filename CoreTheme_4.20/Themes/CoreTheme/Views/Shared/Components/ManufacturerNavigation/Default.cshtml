@@ -2,25 +2,11 @@
 
 @if (Model.Manufacturers.Count > 0)
 {
-    <div class="block block-manufacturer-navigation well box-shadow-wrapper">
-        <div class="title main-title">
-            <strong>@T("Manufacturers")</strong>
-        </div>
-        <div class="listbox">
-            <ul class="nav nav-list">
-                @foreach (var manufacturer in Model.Manufacturers)
-                {
-                    <li class="@(manufacturer.IsActive ? "active" : "inactive")">
-                        <a href="@Url.RouteUrl("Manufacturer", new { SeName = manufacturer.SeName })">@manufacturer.Name</a>
-                    </li>
+       <div class="ov-r-item">
+            <div class="orr-title">FILTERS</div>
+             @foreach (var manufacturer in Model.Manufacturers)
+                {              
+                    <div class="orr-text">  <a class="link-red" href="@Url.RouteUrl("Manufacturer", new { SeName = manufacturer.SeName })">@manufacturer.Name</a></div>              
                 }
-            </ul>
-            @if (Model.TotalManufacturers > Model.Manufacturers.Count)
-            {
-                <div class="view-all">
-                    <a href="@Url.RouteUrl("ManufacturerList")">@T("Manufacturers.ViewAll")</a>
-                </div>
-            }
         </div>
-    </div>
 }

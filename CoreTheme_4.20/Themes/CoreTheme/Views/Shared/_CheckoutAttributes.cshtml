@@ -8,7 +8,7 @@
 @if (Model.CheckoutAttributes.Count > 0)
 {
     var attributeChangeScriptsBuilder = new StringBuilder();
-    <div class="checkout-attributes">
+    <div class="checkout-attributes hidden">
         <dl>
             @foreach (var attribute in Model.CheckoutAttributes)
             {

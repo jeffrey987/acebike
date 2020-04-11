@@ -8,23 +8,37 @@
 @{
     //prepare "Add to cart" AJAX link
     var addtocartlink = "";
-    var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+    var shoppingCartTypeId = (int) ShoppingCartType.ShoppingCart;
     var quantity = 1;
-    if (Model.ProductPrice.ForceRedirectionAfterAddingToCart)
-    {
-        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = Model.ProductPrice.ForceRedirectionAfterAddingToCart });
-    }
-    else
-    {
-        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity });
+    if (Model.ProductPrice.ForceRedirectionAfterAddingToCart) {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new {
+            productId = Model.Id, shoppingCartTypeId =
+                shoppingCartTypeId, quantity = quantity, forceredirection = Model.ProductPrice.ForceRedirectionAfterAddingToCart
+        });
+    } else {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new {
+            productId = Model.Id, shoppingCartTypeId =
+                shoppingCartTypeId, quantity = quantity
+        });
     }
 
-    var addtowishlistlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist, quantity = quantity });
-    var addtocomparelink = Url.RouteUrl("AddProductToCompare", new { productId = Model.Id });
+    var addtowishlistlink = Url.RouteUrl("AddProductToCart-Catalog", new {
+        productId = Model.Id, shoppingCartTypeId =
+            (int) ShoppingCartType.Wishlist, quantity = quantity
+    });
+    var addtocomparelink = Url.RouteUrl("AddProductToCompare", new {
+        productId = Model.Id
+    });
 }
-<div class="product-item">
-                    <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })" title="@Model.DefaultPictureModel.Title">
-                        <img class="card-img" alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" >
-                    </a>　
-</div>
 
+<div class="cir-item">
+        <div class="item-mask">
+        <div class="item-mask-text">
+        <a href="@Url.RouteUrl("Product", new {SeName = Model.SeName})" class="link-white">@Model.Name</a>
+        </div>
+          <span class="icon font_family left-icon" >&#xe60c;</span>
+          <span class="bot-text">@Model.ProductPrice.Price</span>
+          <span class="icon font_family right-icon" >&#xe60d;</span>
+        </div>
+        <img  alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title">
+ </div>

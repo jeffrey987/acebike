@@ -2,74 +2,22 @@
 
 @if (Model.NewsItems.Count > 0)
 {
-    <div class="news-list-homepage">
-        <div class="title sub-title">
-            <strong>@T("News")</strong>
-        </div>
-        <div class="news-items">
-            <div class="row">
-                @if (Model.NewsItems.Count <= 2)
-                { 
-                     foreach (var item in Model.NewsItems)
-                     {
-                        <div class="col-md-6">
-                            <div class="item">
-                                <div class="news-head">
-                                    <a class="news-title" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">
-                                        @item.Title
-                                    </a> 
-                                </div>
-                                <span class="news-date">
-                                    -
-                                    @item.CreatedOn.ToString("D")
-                                </span>
-                                <div class="news-details">
-                                    @Html.Raw(item.Short)
-                                </div>
-                                <div class="news-button">
-                                    <a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })" class="btn btn btn-default read-more">
-                                       <span>@T("News.MoreInfo")</span> <i class="fa fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                     }
-                }
-                else
-                {
-                    <div id="home-news-slider" class="home-news-slider owl-carousel owl-theme">
-                        @foreach (var item in Model.NewsItems)
-                        {
-                            <div class="col-md-12">
-                                <div class="item">
-                                    <div class="news-head">
-                                        <a class="news-title" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">
-                                            @item.Title
-                                        </a> 
-                                    </div>
-                                    <span class="news-date">
-                                        -
-                                        @item.CreatedOn.ToString("D")
-                                    </span>
-                                    <div class="news-details">
-                                        @Html.Raw(item.Short)
-                                    </div>
-                                    <div class="news-button">
-                                        <a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })" class="btn btn btn-default read-more">
-                                            <span>@T("News.MoreInfo")</span> <i class="fa fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        }
+     <div class="latest-box">
+    <div class="latest-title">LATEST NEWS</div>
+    <div class="latest-box-list">
+     @foreach (var item in Model.NewsItems)
+            {
+      <div class="latest-item">
+        <img class="latest-img" src="~/Themes/CoreTheme/Content/images/maxresdefault-1.png" alt="">
+        <div class="text-box">
+          <div class="title"> <a  class="link-white" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">@item.Title</a></div>
+          <div class="text">  
+            @Html.Raw(item.Short)
                     </div>
-                }
-                <div class="view-all col-md-12">
-                    <a href="@Url.RouteUrl("NewsArchive")" class="btn btn-primary">
-                        @T("News.ViewAll")
-                    </a>
-                </div>
-            </div>
         </div>
+      </div>
+            }
     </div>
+    <div class="lates-more"> <a href="@Url.RouteUrl("News")" style="color: rgba(255,59,46,0.50);"> VIEW MORE</a></div>
+  </div>
 }

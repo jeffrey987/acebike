@@ -1,21 +1,18 @@
 ﻿@model IList<ProductOverviewModel>
 @if (Model.Count > 0)
 {
-    <div class="container pl-4_5 pr-4_5 mt-5">
-        <div class="row">
-            <div class="col-lg-12 red ">
-                <h1><strong>FRESH AND FAST2</strong></h1>
-            </div>
 
-            @foreach (var item in Model)
+     <div class="circle-box clearfix">
+    <div class="cir-title">FRESH AND FAST</div>
+    <div class="cir-list">
+     @foreach (var item in Model)
             {
-            <div class="col-lg-3 ">
-                 @await Html.PartialAsync("_ProductBox", item)
-            </div>
+         @await Html.PartialAsync("_ProductBox", item)
             }
-            <div class="col-lg-12 text-right ">
-                <a href="#" class="red avenitnext-font">view all our products</a>
-            </div>
-        </div>
     </div>
+
+    <div class="cir-str"><a href="" style="color: rgba(255,59,46,1);" > VIEW ALL OUR PRODUCTS </a></div>
+
+  </div>
+
 }

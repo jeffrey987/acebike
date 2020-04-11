@@ -1,0 +1,111 @@
+@model BlogPostListModel
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Blog").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-blog-page");
+    Html.AppendCssFileParts(ResourceLocation.Head, "~/Themes/CoreTheme/Content/css/stars.css");
+    Html.AppendScriptParts(ResourceLocation.Footer, "~/Themes/CoreTheme/Content/js/index.js");
+    Html.AppendScriptParts(ResourceLocation.Footer, "~/Themes/CoreTheme/Content/js/jquery.rating-stars.js");
+    int i=0;
+}
+
+
+    <div class="cus-box">
+        <div class="cus-title">STORIES FROM OUR CUSTOMERS</div>
+
+        <div class="cus-list">
+
+             @foreach (var item in Model.BlogPosts)
+            {
+                if(i%2==0){
+            <!-- 一 -->
+            <div class="cus-item">
+                <div class="img-box">
+                     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BlogListPageBeforePostBody, additionalData = item })
+                </div>
+                <div class="tx-box">
+                    <div class="rating-stars block">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> <a class="link-white" href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})">@item.Title</a></div>
+                        <div class="cus-text">
+                              @Html.Raw(!string.IsNullOrEmpty(item.BodyOverview) ? item.BodyOverview : item.Body)
+                        </div>
+                       
+                    </div>
+
+
+                </div>
+            </div>
+                }else if(i%2==1){
+            <!-- 二 -->
+            <div class="cus-item">
+                <!-- 文字在左 添加 class :left -->
+                <div class="tx-box left">
+                    <div class="rating-stars block ">
+                        <!-- <input type="number" readonly class="form-control rating-value" name="rating-stars-value" id="rating-stars-value"> -->
+                        <!-- 星级评分 -->
+                        <div class="rating-stars-container  start-box">
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="rating-star">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cus-text-block">
+                        <div class="cus-block-title"> <a class="link-white" href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})">@item.Title</a></div>
+                        <div class="cus-text">
+                               @Html.Raw(!string.IsNullOrEmpty(item.BodyOverview) ? item.BodyOverview : item.Body)
+                        </div>                      
+                    </div>
+                </div>
+                <div class="img-box">
+                   @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BlogListPageBeforePostBody, additionalData = item })
+                </div>
+            </div>
+                }
+            i++;
+            }
+         
+
+            <!-- over -->
+        </div>
+    </div>
+
+<!--go to top-->
+     <div class=" clearfix"><img id="gotop" class="back-top pull-right" src="~/Themes/CoreTheme/Content/images/backtop.png" alt=""></div>

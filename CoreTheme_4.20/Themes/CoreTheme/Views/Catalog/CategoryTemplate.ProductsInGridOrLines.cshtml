@@ -5,7 +5,7 @@
 @inject SeoSettings seoSettings
 @inject CommonSettings commonSettings
 @{
-    Layout = "_ColumnsOne";
+    Layout = "_ColumnsTwo";
 
     //title
     Html.AddTitleParts(!string.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
@@ -25,66 +25,63 @@
 }
 
 
-    <h1 class="h1 font-weight-bold black" style="margin-left: 9rem;">PRIDUCT OVERVIEW </h1>
-<!--begin right-->
-    <nav class="navbar-collapse position-fixed" style="right: 9rem; top: 11rem;">
-        <dl class="cate-dl">
-            <dt class="cate-dt"><a class="red" href=""> categories</a></dt>
-            <dd class="cate-dd"><a class="red" href=""> mountain bikes</a></dd>
-            <dd class="cate-dd"><a class="red" href="">road</a> </dd>
-            <dd class="cate-dd"><a class="red" href=""> off road</a></dd>
-            <dd class="cate-dd"><a class="red" href="">components</a> </dd>
-            <dd class="cate-dd"><a class="red" href=""> shimano</a></dd>
-            <dd class="cate-dd"><a class="red" href=""> apperal</a></dd>
-        </dl>
-        <dl class="cate-dl">
-            <dt class="cate-dt"><a class="red" href=""> filters</a></dt>
-            <dd class="cate-dd"><a class="red" href=""> price</a></dd>
-            <dd class="cate-dd"><a class="red" href="">size</a> </dd>
-            <dd class="cate-dd"><a class="red" href="">material</a> </dd>
-            <dd class="cate-dd"><a class="red" href=""> color</a></dd>
-        </dl>
 
-    </nav>
-	<!--end right-->
-    <!--begin left 加个固定宽度-->
-    <div class="container-fluid mt-0 mr-0 mb-0" style="width:60%;margin-left: 9rem;" >
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
-                    <div class="card-header">
-                        <span class="font_family icon-heart-regular float-left ml-3"></span>    
-                        888888888
-                        <span class="font_family icon-shopping-cart-regular float-right mr-3"></span>
+
+        <div class="ov-title">@T("PRODUCT OVERVIEW")</div>
+
+        @foreach (var item in Model.SubCategories)
+        {
+        <!--        1-->
+        <div class="circle-box clearfix pd0">
+            <div class="ov-title-s">
+                <a class="link-red" href="@Url.RouteUrl("Category", new { SeName=item.SeName })"
+                    title="@item.PictureModel.Title">
+                    @item.Name
+                </a>
+            </div>
+            <div class="cir-list ov-circle">
+
+            @foreach(var product_item in Model.Products.Take(4))
+           {     <div class="cir-item">
+                    <div class="item-mask">
+                        <div class="item-mask-text">
+                             <a class="link-white" href="@Url.RouteUrl("Product", new { SeName=product_item.SeName })"
+                    title="@product_item.SeName">
+                    @product_item.Name
+                </a>
+                        </div>
+                        <span class="icon font_family left-icon">&#xe60c;</span>
+                        <span class="bot-text">@product_item.ProductPrice.Price</span>
+                        <span class="icon font_family right-icon">&#xe60d;</span>
                     </div>
-                    <div class="card-body"> fahshjdgfhjsdfghsdkhagfh </div>
+                 <img  alt="@product_item.DefaultPictureModel.AlternateText" src="@product_item.DefaultPictureModel.ImageUrl" title="@product_item.DefaultPictureModel.Title">
+                </div>
+                
+                }
+             
+
+                <!--                sold-out 样式-->
+                <div class="cir-item sold-out">
+                    <div class="item-mask">
+                        <div class="item-mask-text">sold out</div>
+                    </div>
+                    <img src="./images/product.png" alt="">
+                </div>            
+                <div class="cir-item ov-view-more">
+                    <span class="animated" id="view_more">
+                       <a class="link-white" href="@Url.RouteUrl("Product", new { SeName=item.SeName })">
+                  VIEW MORE
+                </a>
+                   </span>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card text-center bgcolor4">
-                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
-                    <div class="card-img-overlay bgcolor4 font-weight-bold" style="line-height: 15rem;" >sold out</div>
-                   
-                </div> 
-                <div class="card-header">
-                        <span class="font_family icon-heart-regular float-left ml-3"></span>
-                        888888888
-                        <span class="font_family icon-shopping-cart-regular float-right mr-3"></span>
-                    </div>
-                    <div class="card-body"> fahshjdgfhjsdfghsdkhagfh </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <img src="~/Themes/CoreTheme/Content/images/product.png" class="card-img" alt="">
-                    <div class="card-header">
-                        <span class="font_family icon-heart-regular float-left ml-3"></span>
-                        888888888
-                        <span class="font_family icon-shopping-cart-regular float-right mr-3"></span>
-                    </div>
-                    <div class="card-body"> fahshjdgfhjsdfghsdkhagfh </div>
-                </div>
-            </div>
+
+            <!--            <div class="cir-str">VIEW ALL OUR PRODUCTS</div>-->
         </div>
-    </div>
-    <!-- end left-->
+        }
+
+
+
+
+
+

@@ -1,6 +1,4 @@
-﻿@model ShoppingCartModel
-
-
+@model ShoppingCartModel
 @{
     Layout = "_ColumnsOne";
 
@@ -13,12 +11,52 @@
 {
     @await Component.InvokeAsync("CheckoutProgress", new { step = CheckoutProgressStep.Cart })
 }
-<div class="page shopping-cart-page">
-    <div class="page-title panel-heading">
-        <h1>@T("ShoppingCart")</h1>
+<div class="orders-box">
+    <div class="or-title">ITEMS IN CART</div>
+    <div class="">
+    @await Component.InvokeAsync("OrderSummary", new { overriddenModel = Model})
     </div>
-    <div class="page-body">
-        @await Component.InvokeAsync("OrderSummary", new { overriddenModel = Model })
+
+
+    <div class="circle-box clearfix pd0">
+        <div class="cir-title">YOU MAY ALSO LIKE</div>
+        <div class="cir-list">
+            <div class="cir-item">
+                <div class="item-mask">
+                    <span class="icon font_family left-icon" >&#xe60c;</span>
+                    <span class="bot-text">$666</span>
+                    <span class="icon font_family right-icon" >&#xe60d;</span>
+                </div>
+                <img src="~/Themes/CoreTheme/Content/images/product.png" alt="">
+            </div>
+            <div class="cir-item">
+                <div class="item-mask">
+                    <span class="icon font_family left-icon" >&#xe60c;</span>
+                    <span class="bot-text">$666</span>
+                    <span class="icon font_family right-icon" >&#xe60d;</span>
+                </div>
+                <img src="~/Themes/CoreTheme/Content/images/product.png" alt="">
+            </div>
+            <div class="cir-item">
+                <div class="item-mask">
+                    <span class="icon font_family left-icon" >&#xe60c;</span>
+                    <span class="bot-text">$666</span>
+                    <span class="icon font_family right-icon" >&#xe60d;</span>
+                </div>
+                <img src="~/Themes/CoreTheme/Content/images/product.png" alt="">
+            </div>
+            <div class="cir-item">
+                <div class="item-mask">
+                    <span class="icon font_family left-icon" >&#xe60c;</span>
+                    <span class="bot-text">$666</span>
+                    <span class="icon font_family right-icon" >&#xe60d;</span>
+                </div>
+                <img src="~/Themes/CoreTheme/Content/images/product.png" alt="">
+            </div>
+        </div>
+
+        <div class="cir-str">VIEW ALL OUR PRODUCTS</div>
+
     </div>
 </div>
 

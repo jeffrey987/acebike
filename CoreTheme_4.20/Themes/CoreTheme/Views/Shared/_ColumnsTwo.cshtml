@@ -34,8 +34,17 @@
         @RenderSection("Breadcrumb")
     }
 }
-    <div class="sidebar col-md-3">
-        @if (IsSectionDefined("left"))
+   <div class="overview-box">
+    <div class="ov-left">
+         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnBefore })
+        @RenderBody()
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnAfter })
+
+    
+    </div>
+    <div class="ov-right">
+        <div class="or-fixed">
+         @if (IsSectionDefined("left"))
         {
             @RenderSection("left")
         }
@@ -45,15 +54,16 @@
             @await Component.InvokeAsync("CategoryNavigation", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.LeftSideColumnAfterCategoryNavigation })
             @await Component.InvokeAsync("ManufacturerNavigation", new { currentManufacturerId = currentManufacturerId })
-            @await Component.InvokeAsync("VendorNavigation")
+            <!-- @await Component.InvokeAsync("VendorNavigation")
             @await Component.InvokeAsync("RecentlyViewedProductsBlock", new { productThumbPictureSize = 64 })
             @await Component.InvokeAsync("PopularProductTags")
-            @await Component.InvokeAsync("PollBlock", new { systemKeyword = "LeftColumnPoll" })
+            @await Component.InvokeAsync("PollBlock", new { systemKeyword = "LeftColumnPoll" }) -->
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.LeftSideColumnAfter })
         }
+        </div>
     </div>
-    <div class="side-content col-md-9">
-        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnBefore })
-        @RenderBody()
-        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnAfter })
-    </div>
+</div>
+
+ <div class=" clearfix"><img id="gotop" class="back-top pull-right" src="~/Themes/CoreTheme/Content/images/backtop.png" alt=""></div>
+
+
