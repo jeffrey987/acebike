@@ -3176,20 +3176,7 @@
 	padding: 5px 20px 10px;
 }
 
-.checkout-page .button-1 {
-	display: inline-block;
-	min-width: 140px;
-	border: none;
-	background-color: #4ab2f1;
-	padding: 10px 30px;
-	text-align: center;
-	font-size: 15px;
-	color: #fff;
-	text-transform: uppercase;
-}
-.checkout-page .button-1:hover {
-	background-color: #248ece;
-}
+
 
 .checkout-page .address-item {
 	width: 350px;
