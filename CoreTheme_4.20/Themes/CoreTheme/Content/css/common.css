@@ -195,4 +195,11 @@ input[type="checkbox"]:checked::before{content: "\2714";background-color: #fff;p
 }
 .f-border{
     border: .04rem solid #fff;
+    width: 80%;
+}
+.newsletter-subscribe-text
+{
+    background: none;
+    border: none;
+    color: #fff;
 }

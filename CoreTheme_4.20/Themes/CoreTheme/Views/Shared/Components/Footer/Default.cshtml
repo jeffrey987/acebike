@@ -67,8 +67,8 @@
                 <div class="f-text">NEWS LETTER </div>
                 <div><a class="link-white" href="@Url.RouteUrl("Login")"> sign in for al te latest</a></div>
                 <div><a class="link-white"> and greatest from acebikes</a></div>
-                <div class="f-border">E-mailadress</div>
-
+                
+                @await Component.InvokeAsync("NewsletterBox")
             </div>
         </div>
     </div>
