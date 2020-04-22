@@ -16,6 +16,8 @@
 @inject IThemeContext themeContext
 @{
      var themeName = themeContext.WorkingThemeName;
+            DateTimeOffset dto = new DateTimeOffset(DateTime.UtcNow);            
+     long utcStr=  dto.ToUnixTimeMilliseconds();
 //resources
 Html.AppendScriptParts(ResourceLocation.Footer, "~/js/public.countryselect.js");
 Html.AppendScriptParts(ResourceLocation.Footer, "~/js/public.ajaxcart.js");
@@ -25,7 +27,7 @@ Html.AppendScriptParts(ResourceLocation.Footer, "~/lib/jquery-ui/jquery-ui-1.12.
 
 
 Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/js/swiper.min.js");
-Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/js/common.js?v=123");
+Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/js/common.js?v={utcStr}");
 Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/fonts/iconfont.js");
 Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/bootstrap/js/bootstrap.min.js");
 Html.AppendScriptParts(ResourceLocation.Footer, $"~/Themes/{themeName}/Content/js/jquery.js");
@@ -39,10 +41,10 @@ Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/fo
 Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/animate.css");
 Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/swiper.min.css");
 Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/bootstrap/css/bootstrap.min.css");
-Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/common.css");
+Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/common.css?v={utcStr}");
 Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/resize.css");
-Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/index.css");
-Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/main.css");
+Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/index.css?v={utcStr}");
+Html.AppendCssFileParts(ResourceLocation.Head, $"~/Themes/{themeName}/Content/css/main.css?v={utcStr}");
 //X-UA-Compatible tag
 if (commonSettings.RenderXuaCompatible)
 {

@@ -2,10 +2,14 @@
 /* admin */
 .button-1{background: none;border: none;}
 .qty-input{ width: 20px;color: black;}
-.link-white{color:#FF3B2E;}
+.link-white{color:#fff;}
 .link-white:hover{color: #fff;}
 .link-red{color:#FF3B2E;}
 .link-red:hover{color:#FF3B2E;}
+.center-1 .page-title,
+.center-1 .title {
+	text-align: center;
+}
 .admin-header-links {
 	background-color: #333;
 	text-align: center;
@@ -30,7 +34,6 @@
 	background-color: #666;
 }
 /* admin */
-
 .mian-box {
     background-color: #EBEBEC;
     padding: 50px 1.4rem 0;

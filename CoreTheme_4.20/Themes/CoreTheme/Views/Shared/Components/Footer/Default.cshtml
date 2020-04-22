@@ -23,45 +23,41 @@
             <!--    第一列-->
             <div class="footer-item">
                 <div class="f-text">ACEBIKE</div>
-                <div> OUR STORY</div>
-                <div>MATERIAL</div>
-                <div>TECHNOLOGY</div>
-                <div>JOIN US</div>
-                <div> CONTACT</div>
+                <div><a class="link-white"> OUR STORY</a></div>
+                <div><a class="link-white">MATERIAL</a></div>
+                <div><a class="link-white">TECHNOLOGY</a></div>
+                <div><a class="link-white">JOIN US</a></div>
+                <div><a class="link-white"> CONTACT</a></div>
             </div>
 
 
             <!--    第二列-->
             <div class="footer-item">
                 <div class="f-text"> PRODUCTS</div>
-                <div> ROAD</div>
-                <div>OFF ROAD</div>
-                <div> MTB</div>
-                <div> COMPONENTS</div>
-                <div> SHIMANO</div>
-                <div> APPERAL</div>
+                <div> <a class="link-white">ROAD</a></div>
+                <div><a class="link-white">OFF ROAD</a></div>
+                <div> <a class="link-white">MTB</a></div>
+                <div> <a class="link-white">COMPONENTS</a></div>
+                <div> <a class="link-white">SHIMANO</a></div>
+                <div><a class="link-white"> APPERAL</a></div>
             </div>
 
             <!--  第三列-->
             <div class="footer-item">
                 <div class="f-text">SUPPORT</div>
-                <div>FQAs</div>
-                <div>RIM ARCHIVE</div>
-                <div>SPOKE CHART</div>
-                <div> MAINTENANCE</div>
-                <div>WARRANTY</div>
-                <div>CRASH REPLACEMENT</div>
-                <div>PAYMENT & DELIVERY</div>
+                  @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn1).ToList())
+                {
+                    <div><a class="link-white" href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></div>
+                }      
             </div>
 
             <!--  第四列-->
             <div class="footer-item">
                 <div class="f-text">POLICY</div>
-                <div> RETURNS & REFUND</div>
-                <div>SHIPMENT</div>
-                <div>TAXES</div>
-                <div>PRIVACY</div>
-                <div>COOKIES</div>
+                     @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn2).ToList())
+                {
+                    <div><a class="link-white" href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></div>
+                }   
 
             </div>
 
@@ -69,8 +65,8 @@
             <!--  第五列-->
             <div class="footer-item">
                 <div class="f-text">NEWS LETTER </div>
-                <div> sign in for al te latest</div>
-                <div> and greatest from acebikes</div>
+                <div><a class="link-white" href="@Url.RouteUrl("Login")"> sign in for al te latest</a></div>
+                <div><a class="link-white"> and greatest from acebikes</a></div>
                 <div class="f-border">E-mailadress</div>
 
             </div>

@@ -13,12 +13,11 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
         <ul class="nav navbar-nav pull-right">
-          <li><a href="@Url.RouteUrl("ContactUs")">OUR STORY</a></li>
-          <li><a href="@Url.RouteUrl("Blog")">CUSTOMER STORIES</a></li>
-          <li><a href="@Url.RouteUrl("Category", new { SeName = "computers" })">PRODUCTS</a></li>
-          <li><a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a></li>
-          @await Component.InvokeAsync("HeaderLinks")
-         
+          <li>  <a href="@Url.RouteUrl("ContactUs")"> <strong class="link-white">OUR STORY<strong></a></li>
+          <li><a href="@Url.RouteUrl("Blog")"><strong class="link-white">CUSTOMER STORIES<strong></a></li>
+          <li><a href="@Url.RouteUrl("Category", new { SeName = "computers" })"><strong class="link-white">PRODUCTS<strong></a></li>
+          <li><a href="@Url.RouteUrl("ShoppingCart")"><strong class="link-white">@T("ShoppingCart")<strong class="link-white"></a></li>
+          @await Component.InvokeAsync("HeaderLinks")         
           <li><a href="#" id="searchIcon" class="glyphicon glyphicon-search"></a></li>
           <li class="over-hidden"><input  class="nav-search" type="text"></li>
           @await Component.InvokeAsync("LanguageSelector")      

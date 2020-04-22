@@ -13,9 +13,10 @@ $(function () {
             $('.nav-search').addClass('nav-search-active')
             $('.nav-search').animate({'left':'0','width':'1.2rem'})
         }
+    })
 
-
-
+    $('#flag_box').click(function () {
+        $('.flag-list').slideToggle()
     })
 })
 

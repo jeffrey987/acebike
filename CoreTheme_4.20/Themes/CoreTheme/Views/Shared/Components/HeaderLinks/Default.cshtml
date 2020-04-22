@@ -4,13 +4,13 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderLinksBefore })
         @if (Model.IsAuthenticated)
         {
-            <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
-            <li><a href="@Url.RouteUrl("Logout")">@T("Account.Logout")</a></li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")"><strong  class="link-white">@T("Account.MyAccount")</strong></a></li>
+            <li><a href="@Url.RouteUrl("Logout")"><strong  class="link-white">@T("Account.Logout")</strong></a></li>
         }
         else
         {
             var returnUrl = webHelper.GetRawUrl(Context.Request);
-           <li><a href="@Url.RouteUrl("Login")">@T("Account.Login")</a></li>
+           <li><a href="@Url.RouteUrl("Login")"><strong class="link-white">@T("Account.Login")</strong></a></li>
         }
         @if (Model.WishlistEnabled)
         {

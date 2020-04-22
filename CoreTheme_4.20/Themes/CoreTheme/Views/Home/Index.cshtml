@@ -54,9 +54,10 @@ Html.AppendScriptParts(ResourceLocation.Footer, "~/Themes/CoreTheme/Content/js/i
       <div class="img-list">
         <img src="~/Themes/CoreTheme/Content/images/william-hook-pa-1.png" alt="">
       </div>
-      <div class="view-more"> <a href="@Url.RouteUrl("Blog")" class="link-white"> VIEW MORE</a></div>
     </div>
-    
+      <div class="position-relative">
+      <div class="view-more"> <a href="@Url.RouteUrl("Blog")" class="link-white"> VIEW MORE</a></div>
+      </div>
   </div>
 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeNews })
 @await Component.InvokeAsync("HomepageNews")
